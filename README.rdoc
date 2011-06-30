@@ -1,11 +1,11 @@
-= Sluggable
+= Sluggish
 
 Creates a shortcut alias for find_by_(name|slug|key) as [] so that you can call MyModel[:foo] and it will find it.
 A possible usage would be for common queries like User.find_by_email. 
 The setup would be
 
   Class User < ActiveRecord::Base
-    include Sluggable
+    include Sluggish
     sluggit! :email
   end
 
@@ -13,7 +13,7 @@ The setup would be
 
 == Installation
 
-  gem install sluggable
+  gem install Sluggish
 
 == Notes
 
