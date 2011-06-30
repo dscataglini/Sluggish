@@ -1,10 +1,10 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "sluggable/version"
+require "sluggish/version"
 
 Gem::Specification.new do |s|
-  s.name        = "sluggable"
-  s.version     = Sluggable::VERSION
+  s.name        = "Sluggish"
+  s.version     = Sluggish::VERSION
   s.authors     = ["Diego Scataglini"]
   s.email       = ["diego@junivi.com"]
   s.homepage    = ""

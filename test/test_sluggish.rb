@@ -1,8 +1,8 @@
-require "sluggable"
+require "sluggish"
 require 'test/unit'
 
 class Mock1
-  include Sluggable
+  include Sluggish
   sluggit! :foo
   def self.find_by_foo(msg)
     msg
@@ -12,7 +12,7 @@ end
 %w{name slug key}.each do |k|
   eval <<-EOF
     class Mock#{k}
-      include Sluggable
+      include Sluggish
       def self.find_by_#{k}(msg)
         msg
       end
@@ -20,7 +20,7 @@ end
   EOF
 end
 
-class TestSluggable < Test::Unit::TestCase
+class TestSluggish < Test::Unit::TestCase
   def test_should_look_for_name
     assert_equal "bar", Mockname["bar"]
   end
