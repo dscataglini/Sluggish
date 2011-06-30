@@ -1,0 +1,20 @@
+= Sluggable
+
+Creates a shortcut alias for find_by_(name|slug|key) as [] so that you can call MyModel[:foo] and it will find it.
+A possible usage would be for common queries like User.find_by_email. 
+The setup would be
+
+  Class User < ActiveRecord::Base
+    include Sluggable
+    sluggit! :email
+  end
+
+  User['foo@example.com'] #=> User.find_by_email('foo@example.com')
+
+== Installation
+
+  gem install sluggable
+
+== Notes
+
+Relies on the class responding to find_by_(foo)
